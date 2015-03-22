@@ -40,7 +40,21 @@ At the beginning of the script, you can set several variables:
 * IP - the IP address of your bitcoin node
  
 And of cause you can adjust the HTML template _status_template_.
+In the template you can use all the variables that you have set in the configuration section and all the values that are returned by _bitcoin-cli getinfo_. 
+Usefull parameters are:
 
+* version
+* protocolversion
+* blocks
+* connections
+* difficulty
+
+These are set as shell variables so insert them as ${variable}.
+
+## Important
+
+As the templates is evaluated by the shell, properly escape all double quotes.
+ 
 ## Licensing
 
 * Copyright (c) 2015 [Martin Meier](http://www.edv-beratung-meier.de)

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset='utf-8'>
+ <title>Bitcoin Node Status</title>
+ <link href='http://fonts.googleapis.com/css?family=Exo+2:300,400' rel='stylesheet' type='text/css'>
+</head>
+<body style=\"font-family: 'Exo 2', sans-serif;\">
+<h1>Bitcoin Node Status</h1>
+<div style='float:right; margin:10px;'><img src='node_btc_address.png' alt='${donation_address}' /></div>
+<p>This Bitcon Node is running 24/7 to support the world wide Bitcoin Network.</p>
+<table>
+<tr><td>Bitcoin Node</td><td> ${IP}:8333</td></tr>
+<tr><td>Number of Connections</td><td> ${connections}</td></tr>
+<tr><td>Block Number</td><td> ${blocks}</td></tr>
+<tr><td>Difficulty</td><td> ${difficulty}</td></tr>
+<tr><td>Node Version</td><td> ${version}</td></tr>
+<tr><td>Node Location</td><td> Germany</td></tr>
+<tr><td>Protokoll Version</td><td> ${protocolversion}</td></tr>
+<tr><td>Donnate</td><td>${donation_address}</td></tr>
+<tr><td>last update of this page</td><td> $(date)</td></tr>
+</table>
+</body>
