@@ -22,7 +22,7 @@ To run this script, you will need:
 On a standard bitcoin core node, _bitcoin-cli_ is installed at /usr/local/bin and has access to the bitcoind when you run it as the user you installed the bitcoind configuration.
 So all you need is _bash_ and _sed_ and any web server set up to deliver your status page.
 
-Copy the files in the _bash_ directory to your bitcoin node, i.e. in the home directory of your bitcoin user.
+Copy the files in the _app_ directory to your bitcoin node, i.e. in the home directory of your bitcoin user.
 Create a directory that serves as the docroot of your status page and set this directory as the _outputdir_ in the configuration part of _generate_status_page_.
 Make sure that _generate_status_page_ is executable (chmod +x generate_status_page).
 
