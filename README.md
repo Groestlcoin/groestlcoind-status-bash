@@ -23,12 +23,12 @@ On a standard bitcoin core node, _bitcoin-cli_ is installed at /usr/local/bin an
 So all you need is _bash_ and _sed_ and any web server set up to deliver your status page.
 
 Copy the files in the _app_ directory to your bitcoin node, i.e. in the home directory of your bitcoin user.
-Create a directory that serves as the docroot of your status page and set this directory as the _outputdir_ in the configuration part of _generate_status_page_.
-Make sure that _generate_status_page_ is executable (chmod +x generate_status_page).
+Create a directory that serves as the docroot of your status page and set this directory as the _outputdir_ in the configuration part of _refreshe_status_page_.
+Make sure that _refresh_status_page_ is executable (chmod +x generate_status_page).
 
 Run the script every 10 minutes by adding to your crontab:
 
-    */10 * *   *   *     /path/to/your/generate_status_page
+    */10 * *   *   *     /path/to/your/refresh_status_page
 
 ## Configuration
 
