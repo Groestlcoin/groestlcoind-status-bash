@@ -8,18 +8,16 @@
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 # configuration
-# assume bitcoind-cli is located in /usr/local/bin, adjust PATH if it is located elsewhere
+# assume groestlcoind-cli is located in /usr/local/bin, adjust PATH if it is located elsewhere
 PATH=$PATH:/usr/local/bin
 templatefile=$DIR/status.template.html
-qr_image=$DIR/node_btc_address.png
-donation_address=1A3w8UtmKDe9htByvL9UMfUpGRQ7Prsy6x
 outputdir=~/docroot
 IP=148.251.6.18
 
-# get status of bitcoin daemon as bash variables
-eval `bitcoin-cli getinfo | head -n -1 | tail -n +2 | sed -e 's/\s*\"\([^"]*\)\" : \([^\,]*\).*/\1=\2/'`
+# get status of groestlcoin daemon as bash variables
+eval `groestlcoin-cli getnetworkinfo | head -n -1 | tail -n +2 | sed -e 's/\s*\"\([^"]*\)\" : \([^\,]*\).*/\1=\2/'`
+eval `groestlcoin-cli getblockchaininfo | head -n -1 | tail -n +2 | sed -e 's/\s*\"\([^"]*\)\" : \([^\,]*\).*/\1=\2/'`
 
 # fill the template and store it in index.html
 echo "$(eval "echo \"$(cat $templatefile)\"")" > $outputdir/index.html
 cp $qr_image $outputdir/
-
